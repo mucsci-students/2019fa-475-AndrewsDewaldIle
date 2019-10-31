@@ -1,0 +1,8 @@
+Backlog
+
+Features/ideas to add, time permitting:
+
+Features:						Description:
+1. Player battle anim.				When player uses an attack a battle animation happens.
+2. Battle damage partical.			When the player or enemy takes damage a number of damage taken flies up.
+3. Squeaky floor board.				Maybe a floorboard makes a sound because its loose. Possibly holding a key or secret item. 
