@@ -6,3 +6,7 @@ Features:						Description:
 1. Player battle anim.				When player uses an attack a battle animation happens.
 2. Battle damage partical.			When the player or enemy takes damage a number of damage taken flies up.
 3. Squeaky floor board.				Maybe a floorboard makes a sound because its loose. Possibly holding a key or secret item. 
+4. Music warning.					Music gives a hint to what enemies are coming next.
+5. Timer.							Timer to represent how much time before the next battle.
+6. Each weapon as attack.			Battle screen consists attacks of weapons the player aquired.
+7. Possibly multiple puzzles.		More than one room with a puzzle to solve. Mostly to get a point for scene transitions.
