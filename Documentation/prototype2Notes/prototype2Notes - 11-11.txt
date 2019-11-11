@@ -1,0 +1,20 @@
+prototype 2 meeting notes
+- overworld changes - change to 
+- need layout of how map is going to look
+- what type of puzzle and key items needed to solve items
+- decide placement of key items and enemies
+- puzzle types - finding items to get past obstacles? 
+- tilemap for overworld and player movement (locked to a grid)
+- weapons
+- game menu - 
+- background - stylized like old parchment paper
+- layout of new overworld - need to collaborate how key items are laid out
+- showing off to new group - new battle screen
+- ui for battle screen - need sprites
+- batte percentages - player has higher chance to hit due to no current way of healing 
+
+checklist
+- collisions - key item and enemy detection collisions
+- animations - player sprite movement
+- music - menu music, bgm (overworld) music, battle music
+- 
