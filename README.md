@@ -3,10 +3,9 @@
 # Genre/Project: This project is a puzzle/survival game.
 # 
 # Description:
-#	The game so far will consist of mechanics such as: turned based battles, fighting to stay sane
-#		solving a puzzle while not in battle, aquiring key items to solve the puzzle, can collect 
-#		items to help fight enemies, a timer to tell the player when the next battle is, music will
-#		play to signify a specific enemy is coming up next.
+#	The game so far will consist of mechanics such as: turned based battles, survive with your sanity in intact,
+#		solving a puzzle while not in battle, aquiring key items to solve the puzzle, and can collect 
+#		items to help fight enemies.
 #
 #
 # Goals:
