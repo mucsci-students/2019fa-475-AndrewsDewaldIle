@@ -1,20 +1,17 @@
 fileFormatVersion: 2
-guid: dfb5780639f1e444baa98fc018405988
+guid: 5378cac3caf513a429326e51b53e6764
 ModelImporter:
   serializedVersion: 26
   internalIDToNameTable:
   - first:
-      74: 5639774404603845251
-    second: base_arm|base_armAction.001
+      74: 8440248360967096626
+    second: Camera|CameraAction
   - first:
-      74: 3214096275941063241
-    second: base_arm|EyesAction.001
+      74: 4781951162920444690
+    second: Armature|ArmatureAction
   - first:
-      74: 6379869748724367372
-    second: Eyes|EyesAction.001
-  - first:
-      74: -3096269662127376574
-    second: base_arm|PoseLib
+      74: 4743084820616853705
+    second: Armature|CameraAction
   externalObjects: {}
   materials:
     importMaterials: 1

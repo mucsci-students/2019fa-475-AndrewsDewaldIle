@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: dfb5780639f1e444baa98fc018405988
+guid: 0b2ccee8186fe5540b70e48cd699fad2
 ModelImporter:
   serializedVersion: 26
   internalIDToNameTable:
@@ -10,11 +10,11 @@ ModelImporter:
       74: 3214096275941063241
     second: base_arm|EyesAction.001
   - first:
-      74: 6379869748724367372
-    second: Eyes|EyesAction.001
-  - first:
       74: -3096269662127376574
     second: base_arm|PoseLib
+  - first:
+      74: 6379869748724367372
+    second: Eyes|EyesAction.001
   externalObjects: {}
   materials:
     importMaterials: 1
