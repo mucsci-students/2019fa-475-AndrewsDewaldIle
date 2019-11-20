@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class MovementScript : MonoBehaviour{
     private const float tileSize = 0.5f;
-    private Vector3 position;
+    private Vector2 position;
     public float positionTransferTime;
     // Start is called before the first frame update
     void Awake(){
-        position = new Vector3(0.0f,0.0f, 0.0f);
+        position = new Vector3(0.0f,0.0f);
     }
 
     // Update is called once per frame
@@ -27,7 +27,7 @@ public class MovementScript : MonoBehaviour{
         else if (Input.GetKeyDown("right")) {
             position.x += 1;
         }
-        transform.position = Vector3.Lerp(transform.position, position * tileSize, positionTransferTime);
+        transform.position = Vector2.Lerp(transform.position, position * tileSize, positionTransferTime);
 
     }
 }
