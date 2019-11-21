@@ -3,31 +3,44 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class MovementScript : MonoBehaviour{
-    private const float tileSize = 0.5f;
-    private Vector2 position;
-    public float positionTransferTime;
+    private const float tileSize = 1.0f;
+    private float positionTransferDist;
+    private Vector2 currentPos;
     // Start is called before the first frame update
     void Awake(){
-        position = new Vector3(0.0f,0.0f);
+        positionTransferDist = 0.05f;
+        currentPos = transform.position;
     }
 
     // Update is called once per frame
     void Update(){
-        //Tile size of 8 by 8
-        //Size not sure yet.
+        Vector2 nextPosition = Vector2.zero;
+        
         if (Input.GetKeyDown("up")){
-            position.y += 1;
+            nextPosition.y = 1;
         }
         else if (Input.GetKeyDown("down")){
-            position.y -= 1;
+            nextPosition.y = -1;
         }
         else if (Input.GetKeyDown("left")){
-            position.x -= 1;
+            nextPosition.x = -1;
         }
         else if (Input.GetKeyDown("right")) {
-            position.x += 1;
+            nextPosition.x = 1;
         }
-        transform.position = Vector2.Lerp(transform.position, position * tileSize, positionTransferTime);
+
+        //Debug.DrawRay(currentPos, nextPosition * tileSize, Color.red, 0.5f);
+
+        RaycastHit2D[] rays = Physics2D.RaycastAll(currentPos, nextPosition, tileSize);
+        foreach (var ray in rays){
+            if (ray.collider.gameObject.tag != "Player") {
+                return;
+            }
+        }
+
+        currentPos += nextPosition;
+        transform.position = Vector2.Lerp(currentPos, currentPos * tileSize, positionTransferDist);
+        
 
     }
 }
