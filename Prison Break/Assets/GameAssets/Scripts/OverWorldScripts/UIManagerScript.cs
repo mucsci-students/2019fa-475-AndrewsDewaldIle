@@ -18,10 +18,7 @@ public class UIManagerScript : MonoBehaviour{
 
     public void updateUI(){
         int sanityLevel = Player.getSanityLevel();
-        if (sanityLevel < 4){
-            sanityLevel += 1;
-            SanityMeter.sprite = brainSprites[sanityLevel];
-        }
+        SanityMeter.sprite = brainSprites[sanityLevel];
 
     }
 }
