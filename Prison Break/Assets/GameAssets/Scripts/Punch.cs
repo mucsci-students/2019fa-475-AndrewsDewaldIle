@@ -5,36 +5,61 @@ using UnityEngine;
 public class Punch : MonoBehaviour
 {
     public int x;
-    public static int turn;
+    public GameObject Get;
     // Start is called before the first frame update
     void Start()
     {
-        turn = 1;
+
+    }
+
+    public void Wrapper()
+    {
+        StartCoroutine(hit());
     }
 
     // Update is called once per frame
-    public void hit()
+    public IEnumerator hit()
     {
-        if (turn == 1)
+        if (BattleData.turn == 1)
         {
             x = Random.Range(1, 5);
             if (x < 4 && EnemyHealth.enemyPick == 1 && EnemyHealth.health1 > 0)
             {
                 EnemyHealth.health1 -= 1;
-                turn = 2;
+                TextChange.BattleText = "Hit Enemy 1";
+                yield return new WaitForSeconds(2);
+                TextChange.BattleText = "Enemy Turn";
+                yield return new WaitForSeconds(2);
+                BattleData.turn = 2;
+                Get.GetComponent<EnemyAttack>().Wrapper();
             }
             else if (x < 4 && EnemyHealth.enemyPick == 2 && EnemyHealth.health2 > 0)
             {
                 EnemyHealth.health2 -= 1;
-                turn = 2;
+                TextChange.BattleText = "Hit Enemy 2";
+                yield return new WaitForSeconds(2);
+                TextChange.BattleText = "Enemy Turn";
+                yield return new WaitForSeconds(2);
+                BattleData.turn = 2;
+                Get.GetComponent<EnemyAttack>().Wrapper();
             }
             else if(EnemyHealth.enemyPick == 1 && EnemyHealth.health1 > 0 && x == 4) 
             {
-                turn = 2;
+                TextChange.BattleText = "Missed Enemy 1";
+                yield return new WaitForSeconds(2);
+                TextChange.BattleText = "Enemy Turn";
+                yield return new WaitForSeconds(2);
+                BattleData.turn = 2;
+                Get.GetComponent<EnemyAttack>().Wrapper();
             }
             else if(EnemyHealth.enemyPick == 2 && EnemyHealth.health2 >0 && x == 4)
             {
-                turn = 2;
+                TextChange.BattleText = "Missed Enemy 2";
+                yield return new WaitForSeconds(3);
+                TextChange.BattleText = "Enemy Turn";
+                yield return new WaitForSeconds(2);
+                BattleData.turn = 2;
+                Get.GetComponent<EnemyAttack>().Wrapper();
             }
         }
     }
