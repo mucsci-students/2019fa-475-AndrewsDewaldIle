@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class MovementScript : MonoBehaviour{
-    private const float tileSize = 1.0f;
+    private const float tileSize = 0.25f;
     private float positionTransferDist;
     private Vector2 currentPos;
     // Start is called before the first frame update
@@ -17,21 +17,21 @@ public class MovementScript : MonoBehaviour{
         Vector2 nextPosition = Vector2.zero;
         
         if (Input.GetKeyDown("up")){
-            nextPosition.y = 1;
+            nextPosition.y += tileSize;
         }
         else if (Input.GetKeyDown("down")){
-            nextPosition.y = -1;
+            nextPosition.y += -tileSize;
         }
         else if (Input.GetKeyDown("left")){
-            nextPosition.x = -1;
+            nextPosition.x += -tileSize;
         }
         else if (Input.GetKeyDown("right")) {
-            nextPosition.x = 1;
+            nextPosition.x += tileSize;
         }
 
-        //Debug.DrawRay(currentPos, nextPosition * tileSize, Color.red, 0.5f);
+        Debug.DrawRay(currentPos, nextPosition, Color.red, 0.5f);
 
-        RaycastHit2D[] rays = Physics2D.RaycastAll(currentPos, nextPosition, tileSize);
+        RaycastHit2D[] rays = Physics2D.RaycastAll(currentPos, nextPosition.normalized, tileSize);
         foreach (var ray in rays){
             if (ray.collider.gameObject.tag != "Player") {
                 return;
@@ -39,7 +39,7 @@ public class MovementScript : MonoBehaviour{
         }
 
         currentPos += nextPosition;
-        transform.position = Vector2.Lerp(currentPos, currentPos * tileSize, positionTransferDist);
+        transform.position = Vector2.Lerp(currentPos, nextPosition, positionTransferDist);
         
 
     }
