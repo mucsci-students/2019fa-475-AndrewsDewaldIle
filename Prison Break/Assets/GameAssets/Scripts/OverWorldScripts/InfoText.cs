@@ -2,32 +2,29 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-public class InfoText: MonoBehaviour{
+public class InfoText{
 	public Text textImageObject;
-	private Vector3 mySpeed;
+	private Vector2 mySpeed;
     private static int id = 0;
     private int myID;
 
 	public InfoText(Text text,float speed) { 
 		textImageObject = text;
-		mySpeed = new Vector3(0.0f,speed, 0.0f);
+        speed = -speed;
+		mySpeed = new Vector2(0.0f,speed);
         myID = id;
         id++;
 	}
-    // Start is called before the first frame update
-    void Awake(){
-        
-    }
 
     // Update is called once per frame
-    void Update(){
-        Vector3 nextPos = textImageObject.transform.position + mySpeed;
-        textImageObject.transform.position = Vector3.Lerp(textImageObject.transform.position, nextPos, 0.005f);
+    public void Update(){
+        Vector2 nextPos = textImageObject.rectTransform.anchoredPosition + mySpeed;
+        textImageObject.rectTransform.anchoredPosition = Vector2.Lerp(textImageObject.rectTransform.anchoredPosition, nextPos, 0.5f);
         
     }
 
-    public Vector3 myPosition() {
-        return textImageObject.transform.position;
+    public Vector2 myPosition() {
+        return textImageObject.rectTransform.anchoredPosition;
     }
 
     public bool sameInfoText(List<InfoText> rList, InfoText anotherIT) {
@@ -40,5 +37,9 @@ public class InfoText: MonoBehaviour{
     }
     public int getID(){
         return myID;
+    }
+
+    public void setPosText(float xPos, float yPos) {
+        textImageObject.rectTransform.anchoredPosition = new Vector2(xPos, yPos);
     }
 }

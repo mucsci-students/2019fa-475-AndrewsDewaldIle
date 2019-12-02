@@ -2,18 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+
 public class UIManagerScript : MonoBehaviour{
     public Image SanityMeter;
     public PlayerScript Player;
     public Text originalText;
     public List<InfoText> listInfoText;
     public float infoTextSpeed;
-    private string infoToDisplay;
     public Sprite[] brainSprites;
+    public Canvas uiCanvas;
     private int called = 0;
     // Start is called before the first frame update
     void Awake(){
-        infoToDisplay = "";
         listInfoText = new List<InfoText>();
     }
 
@@ -26,33 +26,39 @@ public class UIManagerScript : MonoBehaviour{
         int sanityLevel = Player.getSanityLevel();
         SanityMeter.sprite = brainSprites[sanityLevel];
 
-
-
-
         if (listInfoText.Count != 0) {
             Debug.Log("List Count:" + listInfoText.Count);
             List<InfoText> removeText = new List<InfoText>();
             foreach(InfoText info in listInfoText) {
-                if (info.textImageObject.transform.position.y > 200.0f) {
+                info.Update();
+                if (info.textImageObject.rectTransform.anchoredPosition.y < -400.0f) {
                     removeText.Add(info);
                 }
             }
             if (removeText.Count != 0){
                 foreach (InfoText info1 in removeText)
+                {
+                    Destroy(info1.textImageObject.gameObject);
                     listInfoText.RemoveAll(r => r.getID() == info1.getID());
+                   
+                }
             }
             
         }
 
         if (called < 1) {
             displayInfo("Did it work.");
-            called++;
+            called += 1;
         }
+
     }
 
     public void displayInfo(string text) {
         Text newText = Instantiate(originalText);
-        InfoText infoText = new InfoText(newText,infoTextSpeed);
+        newText.text = text;
+        newText.transform.SetParent(uiCanvas.transform);
+        newText.rectTransform.anchoredPosition = new Vector2(0,0);
+        InfoText infoText = new InfoText(newText, infoTextSpeed);
         listInfoText.Add(infoText);
     }
 }
