@@ -11,7 +11,8 @@ public class UIManagerScript : MonoBehaviour{
     public float infoTextSpeed;
     public Sprite[] brainSprites;
     public Canvas uiCanvas;
-    private int called = 0;
+
+    private float bottomScreenLimit = -280.0f;
     // Start is called before the first frame update
     void Awake(){
         listInfoText = new List<InfoText>();
@@ -27,11 +28,10 @@ public class UIManagerScript : MonoBehaviour{
         SanityMeter.sprite = brainSprites[sanityLevel];
 
         if (listInfoText.Count != 0) {
-            Debug.Log("List Count:" + listInfoText.Count);
             List<InfoText> removeText = new List<InfoText>();
             foreach(InfoText info in listInfoText) {
                 info.Update();
-                if (info.textImageObject.rectTransform.anchoredPosition.y < -400.0f) {
+                if (info.textImageObject.rectTransform.anchoredPosition.y < bottomScreenLimit) {
                     removeText.Add(info);
                 }
             }
@@ -45,12 +45,6 @@ public class UIManagerScript : MonoBehaviour{
             }
             
         }
-
-        if (called < 1) {
-            displayInfo("Did it work.");
-            called += 1;
-        }
-
     }
 
     public void displayInfo(string text) {

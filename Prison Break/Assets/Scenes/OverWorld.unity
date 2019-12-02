@@ -27782,85 +27782,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!1 &645275516
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 645275519}
-  - component: {fileID: 645275518}
-  - component: {fileID: 645275517}
-  m_Layer: 5
-  m_Name: InfoText
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &645275517
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 645275516}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 2
-    m_MaxSize: 40
-    m_Alignment: 0
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: 'Info:'
---- !u!222 &645275518
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 645275516}
-  m_CullTransparentMesh: 0
---- !u!224 &645275519
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 645275516}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1194246170}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.6, y: 0.2}
-  m_AnchorMax: {x: 0.6, y: 0.2}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 500, y: 120}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &675934483
 GameObject:
   m_ObjectHideFlags: 0
@@ -28159,7 +28080,6 @@ RectTransform:
   m_Children:
   - {fileID: 1743746598}
   - {fileID: 995165075}
-  - {fileID: 645275519}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -37183,15 +37103,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SanityMeter: {fileID: 1743746599}
   Player: {fileID: 149306838}
-  originalText: {fileID: 645275517}
-  listInfoText: []
-  infoTextSpeed: 5
+  originalText: {fileID: 6547668482401587502, guid: 8c84990ce23df4f63a10db9b82b05a9c,
+    type: 3}
+  infoTextSpeed: 2
   brainSprites:
   - {fileID: 21300000, guid: e49374e52f28c452c8eadf43b8dcafb4, type: 3}
   - {fileID: 21300000, guid: e95ad04189d744a2da3e9d0ac8877a26, type: 3}
   - {fileID: 21300000, guid: e41c27faac3b7423485f5615c6434896, type: 3}
   - {fileID: 21300000, guid: 56721e85b7b54418f86b2b040cf5ad6b, type: 3}
   - {fileID: 21300000, guid: 137e46405bb6f4a9a9e0121da9189cd5, type: 3}
+  uiCanvas: {fileID: 1194246169}
 --- !u!4 &2006821510
 Transform:
   m_ObjectHideFlags: 0

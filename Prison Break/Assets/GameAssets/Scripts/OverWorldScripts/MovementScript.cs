@@ -33,7 +33,7 @@ public class MovementScript : MonoBehaviour{
 
         RaycastHit2D[] rays = Physics2D.RaycastAll(currentPos, nextPosition.normalized, tileSize);
         foreach (var ray in rays){
-            if (ray.collider.gameObject.tag != "Player") {
+            if (ray.collider.gameObject.tag != "Player" && ray.collider.gameObject.tag != "Knife") {
                 return;
             }
         }
