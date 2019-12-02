@@ -210,6 +210,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7aaeb9905eab07499d2b375e5ae1fa5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cliff: {fileID: 1064432036}
+  uIManager: {fileID: 2006821509}
 --- !u!212 &149306836
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -287,6 +289,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18f884d76fa98304aa1137e567176620, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  uIManager: {fileID: 2006821509}
   moveScript: {fileID: 149306835}
 --- !u!50 &149306839
 Rigidbody2D:
