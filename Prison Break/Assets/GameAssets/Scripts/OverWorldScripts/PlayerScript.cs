@@ -46,6 +46,13 @@ public class PlayerScript : MonoBehaviour{
 
                     }
                 }
+                else if(hit.collider.gameObject.name == "doorsBossRoom")
+                {
+                    if(actionDir == new Vector2(-1.0f, 0.0f))
+                    {
+                        hit.collider.gameObject.SetActive(false);
+                    }
+                }
             }
           
         }
@@ -92,5 +99,19 @@ public class PlayerScript : MonoBehaviour{
                     break;
             }
         return actionDir;
+    }
+
+    public bool getKeyCollected()
+    {
+        return keyCollected;
+    }
+
+    public bool getBoardCollected()
+    {
+        return boardCollected;
+    }
+    public bool getKnifeCollected()
+    {
+        return knifeCollected;
     }
 }

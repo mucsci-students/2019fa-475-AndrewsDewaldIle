@@ -6,6 +6,8 @@ public class MovementScript : MonoBehaviour{
     public enum DIR {LEFT,RIGHT,DOWN,UP};
     public GameObject cliff;
     public UIManagerScript uIManager;
+    public PlayerScript player;
+    public GameObject doorsBossRoom;
 
     private const float tileSize = 0.25f;
     private float positionTransferDist;
@@ -50,6 +52,15 @@ public class MovementScript : MonoBehaviour{
                 cliff.GetComponent<BoxCollider2D>().enabled = true;
                 cliff.GetComponentInChildren<SpriteRenderer>().enabled = false;
                 Destroy(ray.collider.gameObject);
+            }
+            else if(ray.collider.gameObject.name == "DoorsCloseEvent")
+            {
+                if (player.getKeyCollected())
+                {
+                    uIManager.displayInfo("The doors have shut behind you.");
+                    doorsBossRoom.SetActive(true);
+                    Destroy(ray.collider.gameObject);
+                }
             }
         }        
         transform.position += ((Vector3)nextPosition);
