@@ -15,6 +15,18 @@ ModelImporter:
   - first:
       74: 6379869748724367372
     second: Eyes|EyesAction.001
+  - first:
+      74: 8440248360967096626
+    second: Camera|CameraAction
+  - first:
+      74: -4917565089624222959
+    second: Camera|EyesAction.001
+  - first:
+      74: 6907098840393362411
+    second: base_arm|CameraAction
+  - first:
+      74: -6875095084458607053
+    second: Eyes|CameraAction
   externalObjects: {}
   materials:
     importMaterials: 1

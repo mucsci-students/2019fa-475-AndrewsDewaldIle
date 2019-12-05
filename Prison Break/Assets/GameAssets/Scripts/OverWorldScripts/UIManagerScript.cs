@@ -16,6 +16,7 @@ public class UIManagerScript : MonoBehaviour{
     // Start is called before the first frame update
     void Awake(){
         listInfoText = new List<InfoText>();
+        beginningInfo();
     }
 
     // Update is called once per frame
@@ -54,5 +55,15 @@ public class UIManagerScript : MonoBehaviour{
         newText.rectTransform.anchoredPosition = new Vector2(0,0);
         InfoText infoText = new InfoText(newText, infoTextSpeed);
         listInfoText.Add(infoText);
+    }
+
+    private void beginningInfo()
+    {
+        displayInfo("Movement: Arrow Keys");
+        Invoke("endInfo", 0.75f);
+    }
+    private void endInfo()
+    {
+        displayInfo("Action: Spacebar");
     }
 }
