@@ -27,6 +27,318 @@ ModelImporter:
   - first:
       74: -6875095084458607053
     second: Eyes|CameraAction
+  - first:
+      74: 1820556836346035431
+    second: Camera|Cylinder.002Action
+  - first:
+      74: 7268010417054376224
+    second: Camera|Gate bar horizontalAction
+  - first:
+      74: 5712856075742786949
+    second: Camera|Gate bar verticalAction
+  - first:
+      74: -7679707930606512247
+    second: Camera|Gate lockAction
+  - first:
+      74: 3695318634870451145
+    second: Camera|Light.001Action
+  - first:
+      74: -6622931666700767679
+    second: Camera|Light.002Action
+  - first:
+      74: 4491086668946041014
+    second: Camera|Plane.001Action
+  - first:
+      74: 735782386219177548
+    second: Camera|PlaneAction
+  - first:
+      74: -6698283897972230563
+    second: base_arm|Cylinder.002Action
+  - first:
+      74: -2365832071104506131
+    second: base_arm|Gate bar horizontalAction
+  - first:
+      74: -358317927624918568
+    second: base_arm|Gate bar verticalAction
+  - first:
+      74: 9112173644017361009
+    second: base_arm|Gate lockAction
+  - first:
+      74: -1115435663101234362
+    second: base_arm|Light.001Action
+  - first:
+      74: 8740350888069678302
+    second: base_arm|Light.002Action
+  - first:
+      74: -9052083840715864189
+    second: base_arm|Plane.001Action
+  - first:
+      74: 72534699016461205
+    second: base_arm|PlaneAction
+  - first:
+      74: 1530333599547087376
+    second: Eyes|Cylinder.002Action
+  - first:
+      74: 1704599976106380646
+    second: Eyes|Gate bar horizontalAction
+  - first:
+      74: -4689329395064097637
+    second: Eyes|Gate bar verticalAction
+  - first:
+      74: 467678189058252093
+    second: Eyes|Gate lockAction
+  - first:
+      74: 1915365612342932308
+    second: Eyes|Light.001Action
+  - first:
+      74: 507163728481868774
+    second: Eyes|Light.002Action
+  - first:
+      74: 1056111561881602558
+    second: Eyes|Plane.001Action
+  - first:
+      74: -7254520431771675743
+    second: Eyes|PlaneAction
+  - first:
+      74: -7107632058260822858
+    second: Gate bar vertical|CameraAction
+  - first:
+      74: -6189639345848865287
+    second: Gate bar vertical|Cylinder.002Action
+  - first:
+      74: -3655902556081220851
+    second: Gate bar vertical|EyesAction.001
+  - first:
+      74: 7348997146397486508
+    second: Gate bar vertical|Gate bar horizontalAction
+  - first:
+      74: -6406620392285768846
+    second: Gate bar vertical|Gate bar verticalAction
+  - first:
+      74: -3530370076520645476
+    second: Gate bar vertical|Gate lockAction
+  - first:
+      74: 9037459385242017654
+    second: Gate bar vertical|Light.001Action
+  - first:
+      74: -2265547033906299227
+    second: Gate bar vertical|Light.002Action
+  - first:
+      74: -9042129307160657019
+    second: Gate bar vertical|Plane.001Action
+  - first:
+      74: -8055940319982202144
+    second: Gate bar vertical|PlaneAction
+  - first:
+      74: 2540278447092673740
+    second: Light.001|CameraAction
+  - first:
+      74: 3045527503068515766
+    second: Light.001|Cylinder.002Action
+  - first:
+      74: -7050664839763334222
+    second: Light.001|EyesAction.001
+  - first:
+      74: 4605648054002686305
+    second: Light.001|Gate bar horizontalAction
+  - first:
+      74: 1999602413155956478
+    second: Light.001|Gate bar verticalAction
+  - first:
+      74: -8392483585713688591
+    second: Light.001|Gate lockAction
+  - first:
+      74: 3542613571910385267
+    second: Light.001|Light.001Action
+  - first:
+      74: 222506978620878057
+    second: Light.001|Light.002Action
+  - first:
+      74: -373724011028956403
+    second: Light.001|Plane.001Action
+  - first:
+      74: 6053554204914870906
+    second: Light.001|PlaneAction
+  - first:
+      74: 2395661627842255170
+    second: Light.002|CameraAction
+  - first:
+      74: -3886785717156196860
+    second: Light.002|Cylinder.002Action
+  - first:
+      74: 5332008578290663742
+    second: Light.002|EyesAction.001
+  - first:
+      74: -8915844188040971962
+    second: Light.002|Gate bar horizontalAction
+  - first:
+      74: -8397376349053008386
+    second: Light.002|Gate bar verticalAction
+  - first:
+      74: -4127711656789603469
+    second: Light.002|Gate lockAction
+  - first:
+      74: 6135050052621361063
+    second: Light.002|Light.001Action
+  - first:
+      74: 4402105958958337028
+    second: Light.002|Light.002Action
+  - first:
+      74: 2536303605528250319
+    second: Light.002|Plane.001Action
+  - first:
+      74: 142017071974967434
+    second: Light.002|PlaneAction
+  - first:
+      74: -5303214297855850693
+    second: Gate bar horizontal|CameraAction
+  - first:
+      74: 8555271933560051533
+    second: Gate bar horizontal|Cylinder.002Action
+  - first:
+      74: -5479967798050302904
+    second: Gate bar horizontal|EyesAction.001
+  - first:
+      74: 9077556718795763871
+    second: Gate bar horizontal|Gate bar horizontalAction
+  - first:
+      74: -5487037750793013354
+    second: Gate bar horizontal|Gate bar verticalAction
+  - first:
+      74: 1354445917306368143
+    second: Gate bar horizontal|Gate lockAction
+  - first:
+      74: -3290253435091273830
+    second: Gate bar horizontal|Light.001Action
+  - first:
+      74: 4036288985113271715
+    second: Gate bar horizontal|Light.002Action
+  - first:
+      74: -5640069093508233566
+    second: Gate bar horizontal|Plane.001Action
+  - first:
+      74: -8513725925408643993
+    second: Gate bar horizontal|PlaneAction
+  - first:
+      74: -4120353171362760545
+    second: Gate lock|CameraAction
+  - first:
+      74: 8427391612544068701
+    second: Gate lock|Cylinder.002Action
+  - first:
+      74: -598688413442485065
+    second: Gate lock|EyesAction.001
+  - first:
+      74: -5702263766838364708
+    second: Gate lock|Gate bar horizontalAction
+  - first:
+      74: -5758843542250039619
+    second: Gate lock|Gate bar verticalAction
+  - first:
+      74: 1158018421300951759
+    second: Gate lock|Gate lockAction
+  - first:
+      74: 2724132965928884819
+    second: Gate lock|Light.001Action
+  - first:
+      74: -819767149489269771
+    second: Gate lock|Light.002Action
+  - first:
+      74: 6824991317712061129
+    second: Gate lock|Plane.001Action
+  - first:
+      74: 832410418509552817
+    second: Gate lock|PlaneAction
+  - first:
+      74: -2130355454913434855
+    second: Cylinder.002|CameraAction
+  - first:
+      74: -2388811887902066691
+    second: Cylinder.002|Cylinder.002Action
+  - first:
+      74: 7766438136464507670
+    second: Cylinder.002|EyesAction.001
+  - first:
+      74: -3802732816488521483
+    second: Cylinder.002|Gate bar horizontalAction
+  - first:
+      74: 948603980200967678
+    second: Cylinder.002|Gate bar verticalAction
+  - first:
+      74: 6352769904446500570
+    second: Cylinder.002|Gate lockAction
+  - first:
+      74: -5172216236145607122
+    second: Cylinder.002|Light.001Action
+  - first:
+      74: -3868731787107279185
+    second: Cylinder.002|Light.002Action
+  - first:
+      74: -6995479179119288532
+    second: Cylinder.002|Plane.001Action
+  - first:
+      74: -3651778467616634735
+    second: Cylinder.002|PlaneAction
+  - first:
+      74: -5236165298891556921
+    second: Plane|CameraAction
+  - first:
+      74: 863829477933589295
+    second: Plane|Cylinder.002Action
+  - first:
+      74: -8144702596056020424
+    second: Plane|EyesAction.001
+  - first:
+      74: 665737091786778884
+    second: Plane|Gate bar horizontalAction
+  - first:
+      74: -6226189777568918022
+    second: Plane|Gate bar verticalAction
+  - first:
+      74: -8627894410255601359
+    second: Plane|Gate lockAction
+  - first:
+      74: 9041001126834738082
+    second: Plane|Light.001Action
+  - first:
+      74: 6453285739388640404
+    second: Plane|Light.002Action
+  - first:
+      74: 2418431585831821929
+    second: Plane|Plane.001Action
+  - first:
+      74: -5187248419258813496
+    second: Plane|PlaneAction
+  - first:
+      74: 2834005857033484266
+    second: Plane.001|CameraAction
+  - first:
+      74: -6693442850799857974
+    second: Plane.001|Cylinder.002Action
+  - first:
+      74: -292117917722114042
+    second: Plane.001|EyesAction.001
+  - first:
+      74: 6130987173605124159
+    second: Plane.001|Gate bar horizontalAction
+  - first:
+      74: 5174586860174114563
+    second: Plane.001|Gate bar verticalAction
+  - first:
+      74: 4935763695003418850
+    second: Plane.001|Gate lockAction
+  - first:
+      74: -3045151724327253724
+    second: Plane.001|Light.001Action
+  - first:
+      74: 6874046945761153609
+    second: Plane.001|Light.002Action
+  - first:
+      74: -2858551162337178960
+    second: Plane.001|Plane.001Action
+  - first:
+      74: -2193830699095671242
+    second: Plane.001|PlaneAction
   externalObjects: {}
   materials:
     importMaterials: 1
