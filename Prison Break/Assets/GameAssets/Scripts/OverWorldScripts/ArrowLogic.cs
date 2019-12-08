@@ -27,4 +27,8 @@ public class ArrowLogic : MonoBehaviour
         }
         this.gameObject.GetComponent<SpriteRenderer>().sprite = arrowSprites[indexOFArrow];
     }
+    public int getSpriteIndex()
+    {
+        return indexOFArrow;
+    }
 }

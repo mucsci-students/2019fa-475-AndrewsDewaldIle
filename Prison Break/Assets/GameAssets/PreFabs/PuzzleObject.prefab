@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2298016717865496108}
   - component: {fileID: 2298016717865496109}
   - component: {fileID: 2298016717865496114}
+  - component: {fileID: -571830110315842662}
   m_Layer: 0
   m_Name: PuzzleObject
   m_TagString: Wall
@@ -107,3 +108,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.6, y: 0.6}
   m_EdgeRadius: 0
+--- !u!114 &-571830110315842662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2298016717865496115}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bea70b2085dc2c47b858a7d96319702, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  arrowSprites:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  indexOFArrow: 0
