@@ -8,6 +8,8 @@ public class PuzzleManagerScript : MonoBehaviour
     public ArrowLogic redArrow;
     public ArrowLogic blueArrow;
     public UIManagerScript uiManager;
+    public GameObject exitDoors;
+    public GameObject exitDoorsOpen;
     //Answers to the puzzle.
     private bool puzzleSolved = false;
     private const int greenArrowAnswer = 2;
@@ -30,6 +32,11 @@ public class PuzzleManagerScript : MonoBehaviour
                 uiManager.displayInfo("Puzzle has been solved.");
                 Invoke("endMessage", 1.2f);
             }
+        }
+        else
+        {
+            exitDoors.SetActive(false);
+            exitDoorsOpen.SetActive(true);
         }
     }
 

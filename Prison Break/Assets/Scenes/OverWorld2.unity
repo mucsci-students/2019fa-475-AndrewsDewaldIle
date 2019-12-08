@@ -109904,6 +109904,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aabe03b67958c99489854d8b7e68171c, type: 3}
+--- !u!1 &1194603894 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3723800472098001612, guid: 4dd30725a84154128b9c003afdc5f395,
+    type: 3}
+  m_PrefabInstance: {fileID: 1207672075}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1207672075
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -111287,6 +111293,16 @@ PrefabInstance:
       propertyPath: uiManager
       value: 
       objectReference: {fileID: 2027883080}
+    - target: {fileID: 898714523815103644, guid: 0a1a1de5fda9e9c47b6ed2b533c9c709,
+        type: 3}
+      propertyPath: exitDoorsOpen
+      value: 
+      objectReference: {fileID: 229598083}
+    - target: {fileID: 898714523815103644, guid: 0a1a1de5fda9e9c47b6ed2b533c9c709,
+        type: 3}
+      propertyPath: exitDoors
+      value: 
+      objectReference: {fileID: 1194603894}
     - target: {fileID: 9044821168548354341, guid: 0a1a1de5fda9e9c47b6ed2b533c9c709,
         type: 3}
       propertyPath: m_LocalPosition.x
