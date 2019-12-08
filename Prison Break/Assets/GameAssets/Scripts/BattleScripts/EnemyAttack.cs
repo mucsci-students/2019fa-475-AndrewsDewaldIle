@@ -26,18 +26,18 @@ public class EnemyAttack : MonoBehaviour
         for (int i = 1; i <= enemyNum; i++)
         {
             TextChange.BattleText = "Attacked by enemy " + i;
-            yield return new WaitForSeconds(2);
+            yield return new WaitForSeconds(1);
             x = Random.Range(1, 11);
             if (x < 3)
             {
                 PlayerSanity.Sanity -= 1;
                 TextChange.BattleText = "Player took damage";
-                yield return new WaitForSeconds(2);
+                yield return new WaitForSeconds(1);
             }
             else
             {
                 TextChange.BattleText = "Enemy " + i + " missed";
-                yield return new WaitForSeconds(2);
+                yield return new WaitForSeconds(1);
             }
         }
         TextChange.BattleText = "Player Turn";

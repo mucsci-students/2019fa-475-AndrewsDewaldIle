@@ -9,6 +9,13 @@ public class EnemyHealth : MonoBehaviour
     public static int enemyPick;
     public GameObject ghost;
     public GameObject ghost2;
+    public GameObject PlayerGet;
+    public GameObject BattleMenu;
+    public GameObject BattlePlayer;
+    public GameObject BattleInfo;
+    public GameObject EnemySelect1;
+    public GameObject EnemySelect2;
+    public bool ghostDead;
     // Start is called before the first frame update
     void Awake()
     {
@@ -31,6 +38,17 @@ public class EnemyHealth : MonoBehaviour
             ghost2.SetActive(false);
             EnemyAttack.enemyNum--;
             health2--;
+        }
+        else if(health1 <= 0 && health2 <= 0)
+        {
+            PlayerGet.SetActive(true);
+            BattleMenu.SetActive(false);
+            BattlePlayer.SetActive(false);
+            ghost.SetActive(false);
+            ghost2.SetActive(false);
+            BattleInfo.SetActive(false);
+            EnemySelect1.SetActive(false);
+            EnemySelect2.SetActive(false);
         }
     }
 }

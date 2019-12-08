@@ -8,6 +8,14 @@ public class MovementScript : MonoBehaviour{
     public UIManagerScript uIManager;
     public PlayerScript player;
     public GameObject doorsBossRoom;
+    public GameObject PlayerGet;
+    public GameObject BattleMenu;
+    public GameObject BattlePlayer;
+    public GameObject BattleEnemy1;
+    public GameObject BattleEnemy2;
+    public GameObject BattleInfo;
+    public GameObject EnemySelect1;
+    public GameObject EnemySelect2;
 
     private const float tileSize = 0.25f;
     private float positionTransferDist;
@@ -61,6 +69,19 @@ public class MovementScript : MonoBehaviour{
                     doorsBossRoom.SetActive(true);
                     Destroy(ray.collider.gameObject);
                 }
+            }
+            else if (ray.collider.gameObject.name == "Ghost")
+            {
+                ray.collider.gameObject.SetActive(false);
+                uIManager.displayInfo("Attacked by Ghosts");
+                PlayerGet.SetActive(false);
+                BattleMenu.SetActive(true);
+                BattlePlayer.SetActive(true);
+                BattleEnemy1.SetActive(true);
+                BattleEnemy2.SetActive(true);
+                BattleInfo.SetActive(true);
+                EnemySelect1.SetActive(true);
+                EnemySelect2.SetActive(true);
             }
         }        
         transform.position += ((Vector3)nextPosition);

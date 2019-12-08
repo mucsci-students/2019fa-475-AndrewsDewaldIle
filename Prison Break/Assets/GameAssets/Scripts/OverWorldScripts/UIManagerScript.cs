@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class UIManagerScript : MonoBehaviour{
-    public Image SanityMeter;
+    //public Image SanityMeter;
     public PlayerScript Player;
     public Text originalText;
     public List<InfoText> listInfoText;
@@ -25,8 +25,8 @@ public class UIManagerScript : MonoBehaviour{
     }
 
     public void updateUI(){
-        int sanityLevel = Player.getSanityLevel();
-        SanityMeter.sprite = brainSprites[sanityLevel];
+        //int sanityLevel = Player.getSanityLevel();
+        //SanityMeter.sprite = brainSprites[sanityLevel];
 
         if (listInfoText.Count != 0) {
             List<InfoText> removeText = new List<InfoText>();

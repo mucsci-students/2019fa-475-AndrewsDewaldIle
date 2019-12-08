@@ -27,15 +27,15 @@ public class pickupScript : MonoBehaviour
             {
                 case "Knife":
                     player.pickupKnife();
-                    uiManager.displayInfo("You collected a knife.");
+                    uiManager.displayInfo("Collected: Knife");
                     break;
                 case "Board":
                     player.pickupBoard();
-                    uiManager.displayInfo("You collected a board.");
+                    uiManager.displayInfo("Collected: Board");
                     break;
                 case "Key":
                     player.pickupKey();
-                    uiManager.displayInfo("You collected a key.");
+                    uiManager.displayInfo("Collected: Key");
                     break;
             }
             Destroy(this.gameObject);
