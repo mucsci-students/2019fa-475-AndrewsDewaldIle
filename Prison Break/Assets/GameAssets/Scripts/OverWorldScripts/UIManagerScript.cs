@@ -60,7 +60,7 @@ public class UIManagerScript : MonoBehaviour{
     private void beginningInfo()
     {
         displayInfo("Movement: Arrow Keys");
-        Invoke("endInfo", 0.75f);
+        Invoke("endInfo", 1.2f);
     }
     private void endInfo()
     {
