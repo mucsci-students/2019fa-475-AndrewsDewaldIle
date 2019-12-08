@@ -53,6 +53,10 @@ public class PlayerScript : MonoBehaviour{
                         hit.collider.gameObject.SetActive(false);
                     }
                 }
+                else if(hit.collider.gameObject.tag == "Arrow")
+                {
+                    hit.collider.gameObject.GetComponent<ArrowLogic>().updateArrow();
+                }
             }
           
         }

@@ -51,7 +51,7 @@ public class MovementScript : MonoBehaviour{
 
         RaycastHit2D[] rays = Physics2D.RaycastAll(this.gameObject.transform.position, nextPosition.normalized, tileSize);
         foreach (var ray in rays){
-            if (ray.collider.gameObject.tag == "Wall") {
+            if (ray.collider.gameObject.tag == "Wall" || ray.collider.gameObject.tag == "Arrow") {
                 return;
             }
             else if(ray.collider.gameObject.name == "BoardFallEvent")
