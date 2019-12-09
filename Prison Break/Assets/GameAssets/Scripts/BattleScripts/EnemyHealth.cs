@@ -42,7 +42,7 @@ public class EnemyHealth : MonoBehaviour
             ghost2.SetActive(false);
             bossGhost2.SetActive(false);
             EnemyAttack.enemyNum--;
-            health1 = -2;
+            health2 = -2;
         }
 
         else if(health1 <= 0 && health2 <= 0 && EnemyAttack.enemyNum == 0)
@@ -61,7 +61,7 @@ public class EnemyHealth : MonoBehaviour
             EnemyHealth.health2 = 3;
             EnemyAttack.enemyNum = 2;
             uIManager.displayInfo("Won Battle");
-            TextChange.BattleText = "Player Turn";
+            TextChange.BattleText = "Player Turn: Select Enemy, Then Attack";
         }
     }
 }

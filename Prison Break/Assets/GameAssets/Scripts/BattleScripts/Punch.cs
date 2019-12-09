@@ -24,7 +24,7 @@ public class Punch : MonoBehaviour
             x = Random.Range(1, 5);
             if (x < 4 && EnemyHealth.enemyPick == 1 && EnemyHealth.health1 > 0)
             {
-                EnemyHealth.health1 -= 1;
+                EnemyHealth.health1 -= 2;
                 TextChange.BattleText = "Hit Enemy 1";
                 yield return new WaitForSeconds(1);
                 if (EnemyHealth.health1 > 0 || EnemyHealth.health2 > 0)
@@ -37,7 +37,7 @@ public class Punch : MonoBehaviour
             }
             else if (x < 4 && EnemyHealth.enemyPick == 2 && EnemyHealth.health2 > 0)
             {
-                EnemyHealth.health2 -= 1;
+                EnemyHealth.health2 -= 2;
                 TextChange.BattleText = "Hit Enemy 2";
                 yield return new WaitForSeconds(1);
                 if (EnemyHealth.health1 > 0 || EnemyHealth.health2 > 0)

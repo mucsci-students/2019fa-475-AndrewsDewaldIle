@@ -11,7 +11,7 @@ public class TextChange : MonoBehaviour
     void Start()
     {
         Texter = GetComponent<Text>();
-        BattleText = "Player Turn";
+        BattleText = "Player Turn: Select Enemy, Then Attack";
     }
 
     // Update is called once per frame

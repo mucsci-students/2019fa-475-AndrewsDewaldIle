@@ -97,6 +97,8 @@ public class MovementScript : MonoBehaviour{
                 BattleInfo.SetActive(true);
                 EnemySelect1.SetActive(true);
                 EnemySelect2.SetActive(true);
+                EnemyHealth.health1 = 5;
+                EnemyHealth.health2 = 2;
             }
         }        
         transform.position += ((Vector3)nextPosition);
