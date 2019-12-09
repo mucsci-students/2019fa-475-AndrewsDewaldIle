@@ -38,7 +38,7 @@ public class EnemyHealth : MonoBehaviour
             EnemyAttack.enemyNum--;
             health1 = -2;
         }
-        else if ((health2 == 0 || health1 == -1) && (EnemyAttack.enemyNum == 1 || EnemyAttack.enemyNum == 2))
+        else if ((health2 == 0 || health2 == -1) && (EnemyAttack.enemyNum == 1 || EnemyAttack.enemyNum == 2))
         { 
             ghost2.SetActive(false);
             bossGhost2.SetActive(false);

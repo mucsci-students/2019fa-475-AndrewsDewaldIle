@@ -21,6 +21,7 @@ public class PlayerSanity : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        print(Sanity);
         if(Sanity == 4)
         {
             Sanity1.SetActive(false);

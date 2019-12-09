@@ -9,7 +9,6 @@ public class UIManagerScript : MonoBehaviour{
     public Text originalText;
     public List<InfoText> listInfoText;
     public float infoTextSpeed;
-    public Sprite[] brainSprites;
     public Canvas uiCanvas;
 
     private float bottomScreenLimit = -280.0f;
