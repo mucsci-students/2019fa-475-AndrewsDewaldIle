@@ -16,7 +16,7 @@ public class UIManagerScript : MonoBehaviour{
     // Start is called before the first frame update
     void Awake(){
         listInfoText = new List<InfoText>();
-        beginningInfo();
+        Invoke("beginningInfo", 1f);
     }
 
     // Update is called once per frame

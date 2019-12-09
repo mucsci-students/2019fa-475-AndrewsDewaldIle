@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class PlayerScript : MonoBehaviour{
     private int sanityLevel;
     private bool knifeCollected;
@@ -56,6 +56,13 @@ public class PlayerScript : MonoBehaviour{
                 else if(hit.collider.gameObject.tag == "Arrow")
                 {
                     hit.collider.gameObject.GetComponent<ArrowLogic>().updateArrow();
+                }
+                else if(hit.collider.gameObject.name == "doorsExit")
+                {
+                    if (keyCollected)
+                    {
+                        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1, LoadSceneMode.Single);
+                    }
                 }
             }
           
