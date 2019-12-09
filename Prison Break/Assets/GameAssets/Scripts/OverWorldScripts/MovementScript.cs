@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class MovementScript : MonoBehaviour{
     public enum DIR {LEFT,RIGHT,DOWN,UP};
     public GameObject cliff;
@@ -83,6 +83,10 @@ public class MovementScript : MonoBehaviour{
                     uIManager.displayInfo("Boss has appeared.");
                     Destroy(ray.collider.gameObject);
                 }
+            }
+            else if(ray.collider.gameObject.name == "doorsOpen")
+            {
+                Application.Quit();
             }
             else if (ray.collider.gameObject.name == "Ghost")
             {
