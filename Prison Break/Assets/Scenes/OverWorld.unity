@@ -135,8 +135,8 @@ GameObject:
   - component: {fileID: 32623434}
   - component: {fileID: 32623433}
   - component: {fileID: 32623432}
-  - component: {fileID: 32623439}
   - component: {fileID: 32623440}
+  - component: {fileID: 32623439}
   m_Layer: 0
   m_Name: ScriptHolder
   m_TagString: Untagged
@@ -231,6 +231,7 @@ MonoBehaviour:
   EnemySelect2: {fileID: 1363177270}
   ghostDead: 0
   uIManager: {fileID: 32623439}
+  battleCam: {fileID: 1341874730}
 --- !u!4 &32623438
 Transform:
   m_ObjectHideFlags: 0
@@ -258,7 +259,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 149306838}
-  originalText: {fileID: 550373610}
+  originalText: {fileID: 6547668482401587502, guid: 8c84990ce23df4f63a10db9b82b05a9c,
+    type: 3}
   infoTextSpeed: 5
   brainSprites: []
   uiCanvas: {fileID: 1726663701}
@@ -742,6 +744,7 @@ MonoBehaviour:
   EnemySelect2: {fileID: 1363177270}
   bossGhost: {fileID: 0}
   bossGhost2: {fileID: 0}
+  battleCam: {fileID: 1341874730}
 --- !u!212 &149306836
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -38840,7 +38843,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!20 &1341874731
 Camera:
   m_ObjectHideFlags: 0
@@ -38868,7 +38871,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 4.4712358
+  orthographic size: 4.5
   m_Depth: 1
   m_CullingMask:
     serializedVersion: 2
@@ -39536,7 +39539,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 0.5
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96

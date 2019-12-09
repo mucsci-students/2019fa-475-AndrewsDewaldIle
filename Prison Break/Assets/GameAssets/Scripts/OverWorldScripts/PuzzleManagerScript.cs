@@ -29,7 +29,7 @@ public class PuzzleManagerScript : MonoBehaviour
             if (greenArrow.getSpriteIndex() == greenArrowAnswer && redArrow.getSpriteIndex() == redArrowAnswer && blueArrow.getSpriteIndex() == blueArrowAnswer)
             {
                 puzzleSolved = true;
-                uiManager.displayInfo("Puzzle has been solved.");
+                uiManager.displayInfo("Puzzle solved.");
                 Invoke("endMessage", 1.2f);
             }
         }
@@ -44,4 +44,10 @@ public class PuzzleManagerScript : MonoBehaviour
     {
         uiManager.displayInfo("You may leave. >:)");
     }
+
+    public bool getPuzzleSolved()
+    {
+        return puzzleSolved;
+    }
+
 }

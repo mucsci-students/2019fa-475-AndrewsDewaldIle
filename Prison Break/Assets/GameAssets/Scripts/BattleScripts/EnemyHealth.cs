@@ -19,6 +19,7 @@ public class EnemyHealth : MonoBehaviour
     public GameObject EnemySelect2;
     public bool ghostDead;
     public UIManagerScript uIManager;
+    public GameObject battleCam;
     // Start is called before the first frame update
     void Awake()
     {
@@ -48,6 +49,7 @@ public class EnemyHealth : MonoBehaviour
         else if(health1 <= 0 && health2 <= 0 && EnemyAttack.enemyNum == 0)
         {
             PlayerGet.SetActive(true);
+            battleCam.SetActive(false);
             BattleMenu.SetActive(false);
             BattlePlayer.SetActive(false);
             ghost.SetActive(false);

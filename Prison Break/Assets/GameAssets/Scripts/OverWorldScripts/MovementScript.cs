@@ -18,6 +18,9 @@ public class MovementScript : MonoBehaviour{
     public GameObject EnemySelect2;
     public GameObject bossGhost;
     public GameObject bossGhost2;
+    public GameObject bossEnemy;
+    public GameObject battleCam;
+    public PuzzleManagerScript puzzleManager;
 
     private const float tileSize = 0.25f;
     private float positionTransferDist;
@@ -72,31 +75,26 @@ public class MovementScript : MonoBehaviour{
                     Destroy(ray.collider.gameObject);
                 }
             }
+            else if(ray.collider.gameObject.name == "FinalBossEvent")
+            {
+                if (puzzleManager.getPuzzleSolved())
+                {
+                    bossEnemy.SetActive(true);
+                    uIManager.displayInfo("Boss has appeared.");
+                    Destroy(ray.collider.gameObject);
+                }
+            }
             else if (ray.collider.gameObject.name == "Ghost")
             {
-                ray.collider.gameObject.SetActive(false);
-                uIManager.displayInfo("Attacked by Ghosts");
-                PlayerGet.SetActive(false);
-                BattleMenu.SetActive(true);
-                BattlePlayer.SetActive(true);
+                setBattleScreen(ray, "Attacked by Ghosts.");
                 BattleEnemy1.SetActive(true);
                 BattleEnemy2.SetActive(true);
-                BattleInfo.SetActive(true);
-                EnemySelect1.SetActive(true);
-                EnemySelect2.SetActive(true);
             }
             else if (ray.collider.gameObject.name == "EnemyBoss")
             {
-                ray.collider.gameObject.SetActive(false);
-                uIManager.displayInfo("Attacked by Ghosts");
-                PlayerGet.SetActive(false);
-                BattleMenu.SetActive(true);
-                BattlePlayer.SetActive(true);
+                setBattleScreen(ray, "Attacked by Boss.");
                 bossGhost.SetActive(true);
                 bossGhost2.SetActive(true);
-                BattleInfo.SetActive(true);
-                EnemySelect1.SetActive(true);
-                EnemySelect2.SetActive(true);
                 EnemyHealth.health1 = 5;
                 EnemyHealth.health2 = 2;
             }
@@ -108,4 +106,19 @@ public class MovementScript : MonoBehaviour{
     {
         return lastDir;
     }
+
+    private void setBattleScreen(RaycastHit2D ray, string info)
+    {
+        ray.collider.gameObject.SetActive(false);
+        uIManager.displayInfo(info);
+        battleCam.SetActive(true);
+        PlayerGet.SetActive(false);
+        BattleMenu.SetActive(true);
+        BattlePlayer.SetActive(true);
+        BattleInfo.SetActive(true);
+        EnemySelect1.SetActive(true);
+        EnemySelect2.SetActive(true);
+    }
+
+     
 }

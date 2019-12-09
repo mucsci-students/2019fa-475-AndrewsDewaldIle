@@ -27,14 +27,6 @@ public class InfoText{
         return textImageObject.rectTransform.anchoredPosition;
     }
 
-    public bool sameInfoText(List<InfoText> rList, InfoText anotherIT) {
-        foreach (InfoText info in rList) {
-            if(info == this)
-            return true;
-        }
-        return false;
-        
-    }
     public int getID(){
         return myID;
     }
