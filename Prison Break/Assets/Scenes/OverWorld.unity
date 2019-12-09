@@ -262,7 +262,6 @@ MonoBehaviour:
   originalText: {fileID: 6547668482401587502, guid: 8c84990ce23df4f63a10db9b82b05a9c,
     type: 3}
   infoTextSpeed: 5
-  brainSprites: []
   uiCanvas: {fileID: 1726663701}
 --- !u!114 &32623440
 MonoBehaviour:
@@ -747,6 +746,7 @@ MonoBehaviour:
   bossEnemy: {fileID: 0}
   battleCam: {fileID: 1341874730}
   puzzleManager: {fileID: 0}
+  winScreen: {fileID: 0}
 --- !u!212 &149306836
 SpriteRenderer:
   m_ObjectHideFlags: 0

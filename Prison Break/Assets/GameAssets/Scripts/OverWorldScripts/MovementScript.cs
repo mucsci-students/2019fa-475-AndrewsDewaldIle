@@ -21,7 +21,9 @@ public class MovementScript : MonoBehaviour{
     public GameObject bossEnemy;
     public GameObject battleCam;
     public PuzzleManagerScript puzzleManager;
-
+    public GameObject winScreen;
+    public GameObject sanityText;
+    public GameObject sanityMeter;
     private const float tileSize = 0.25f;
     private float positionTransferDist;
     private DIR lastDir;
@@ -86,7 +88,12 @@ public class MovementScript : MonoBehaviour{
             }
             else if(ray.collider.gameObject.name == "doorsOpen")
             {
-                Application.Quit();
+                winScreen.SetActive(true);
+                sanityMeter.SetActive(false);
+                sanityText.SetActive(false);
+                PlayerGet.SetActive(false);
+                Invoke("endGame", 4.0f);
+                
             }
             else if (ray.collider.gameObject.name == "Ghost")
             {
@@ -124,5 +131,8 @@ public class MovementScript : MonoBehaviour{
         EnemySelect2.SetActive(true);
     }
 
-     
+     private void endGame()
+    {
+        Application.Quit();
+    }
 }
