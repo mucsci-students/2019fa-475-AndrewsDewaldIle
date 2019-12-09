@@ -9,6 +9,8 @@ public class EnemyHealth : MonoBehaviour
     public static int enemyPick;
     public GameObject ghost;
     public GameObject ghost2;
+    public GameObject bossGhost;
+    public GameObject bossGhost2;
     public GameObject PlayerGet;
     public GameObject BattleMenu;
     public GameObject BattlePlayer;
@@ -16,6 +18,7 @@ public class EnemyHealth : MonoBehaviour
     public GameObject EnemySelect1;
     public GameObject EnemySelect2;
     public bool ghostDead;
+    public UIManagerScript uIManager;
     // Start is called before the first frame update
     void Awake()
     {
@@ -27,19 +30,22 @@ public class EnemyHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (health1 == 0)
+        if ((health1 == 0 || health1 == -1) && (EnemyAttack.enemyNum == 1 || EnemyAttack.enemyNum == 2))
         {
             ghost.SetActive(false);
+            bossGhost.SetActive(false);
             EnemyAttack.enemyNum--;
-            health1--;
+            health1 = -2;
         }
-        else if(health2 == 0)
-        {
+        else if ((health2 == 0 || health1 == -1) && (EnemyAttack.enemyNum == 1 || EnemyAttack.enemyNum == 2))
+        { 
             ghost2.SetActive(false);
+            bossGhost2.SetActive(false);
             EnemyAttack.enemyNum--;
-            health2--;
+            health1 = -2;
         }
-        else if(health1 <= 0 && health2 <= 0)
+
+        else if(health1 <= 0 && health2 <= 0 && EnemyAttack.enemyNum == 0)
         {
             PlayerGet.SetActive(true);
             BattleMenu.SetActive(false);
@@ -49,6 +55,13 @@ public class EnemyHealth : MonoBehaviour
             BattleInfo.SetActive(false);
             EnemySelect1.SetActive(false);
             EnemySelect2.SetActive(false);
+            bossGhost.SetActive(false);
+            bossGhost2.SetActive(false);
+            EnemyHealth.health1 = 3;
+            EnemyHealth.health2 = 3;
+            EnemyAttack.enemyNum = 2;
+            uIManager.displayInfo("Won Battle");
+            TextChange.BattleText = "Player Turn";
         }
     }
 }

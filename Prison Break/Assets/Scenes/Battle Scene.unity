@@ -620,6 +620,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ghost: {fileID: 554496323}
   ghost2: {fileID: 386208879}
+  PlayerGet: {fileID: 0}
+  BattleMenu: {fileID: 0}
+  BattlePlayer: {fileID: 0}
+  BattleInfo: {fileID: 0}
+  EnemySelect1: {fileID: 0}
+  EnemySelect2: {fileID: 0}
+  ghostDead: 0
+  uIManager: {fileID: 0}
 --- !u!4 &369833521
 Transform:
   m_ObjectHideFlags: 0
@@ -672,6 +680,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   x: 0
   Get: {fileID: 369833519}
+  uIManager: {fileID: 0}
 --- !u!114 &369833525
 MonoBehaviour:
   m_ObjectHideFlags: 0
