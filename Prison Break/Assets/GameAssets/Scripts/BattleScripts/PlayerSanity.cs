@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerSanity : MonoBehaviour
 {
@@ -42,7 +43,7 @@ public class PlayerSanity : MonoBehaviour
         }
         if (Sanity == 0)
         {
-            player.SetActive(false);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 }
