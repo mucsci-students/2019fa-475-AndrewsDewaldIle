@@ -747,6 +747,8 @@ MonoBehaviour:
   battleCam: {fileID: 1341874730}
   puzzleManager: {fileID: 0}
   winScreen: {fileID: 0}
+  sanityText: {fileID: 0}
+  sanityMeter: {fileID: 0}
 --- !u!212 &149306836
 SpriteRenderer:
   m_ObjectHideFlags: 0

@@ -63,7 +63,7 @@ public class MovementScript : MonoBehaviour{
             }
             else if(ray.collider.gameObject.name == "BoardFallEvent")
             {
-                uIManager.displayInfo("The board fell. You are trapped.");
+                uIManager.displayInfo("The board fell.");
                 cliff.GetComponent<BoxCollider2D>().enabled = true;
                 cliff.GetComponentInChildren<SpriteRenderer>().enabled = false;
                 Destroy(ray.collider.gameObject);
@@ -72,7 +72,7 @@ public class MovementScript : MonoBehaviour{
             {
                 if (player.getKeyCollected())
                 {
-                    uIManager.displayInfo("The doors have shut behind you.");
+                    uIManager.displayInfo("Doors shut behind you.");
                     doorsBossRoom.SetActive(true);
                     Destroy(ray.collider.gameObject);
                 }
